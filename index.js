@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const sendMail = require('./mail'); //import sendmail function
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 8080;
 
 const path = require('path');
 
@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname,'webpages')));
 
 
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: false }));
 
 app.get('/',(req,res)=>{
     res.sendFile(path.join(__dirname,'webpages','index.html'))
