@@ -249,7 +249,9 @@ h3, h4, h5, h6{
     color: black;
     background-size: 100% 3px;
   }
-  
+#fa-color {
+    color:rgb(27,33,50) ;
+}
 .about-content li {
     list-style-type: none;
     position: relative;
